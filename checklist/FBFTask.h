@@ -11,7 +11,7 @@
 @interface FBFTask : NSObject
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *details;
 @property (nonatomic) BOOL status;
 @property (strong, nonatomic) NSDate *createdAt;
 @property (strong, nonatomic) NSDate *updatedAt;
