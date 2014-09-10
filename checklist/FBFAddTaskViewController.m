@@ -14,9 +14,21 @@
 
 @implementation FBFAddTaskViewController
 
+#pragma mark - Load UI
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+#pragma mark - IBActions
+- (IBAction)cancelButtonPressed:(UIButton *)sender
+{
+
+}
+
+- (IBAction)addButtonPressed:(UIButton *)sender
+{
+
 }
 
 #pragma mark - Navigation

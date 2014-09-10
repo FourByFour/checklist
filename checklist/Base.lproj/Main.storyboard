@@ -86,6 +86,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="fWV-Nv-Wme" eventType="touchUpInside" id="xpl-S5-xDq"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-uf-dCo">
                                 <rect key="frame" x="16" y="68" width="288" height="30"/>
@@ -97,6 +100,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="fWV-Nv-Wme" eventType="touchUpInside" id="MJj-Ts-LS3"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="t0n-WZ-dL6">
                                 <rect key="frame" x="16" y="106" width="288" height="107"/>
@@ -154,7 +160,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Task" id="UOE-z4-tJL"/>
+                    <navigationItem key="navigationItem" title="Edit Task" id="UOE-z4-tJL">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="l9m-CM-mvD">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="EUc-eB-xrK" id="gUR-XC-UO5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEd-we-dsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
