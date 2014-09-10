@@ -20,9 +20,9 @@
 {
     self = [super init];
     if (self) {
-        self.title = data[@"title"];
-        self.details = data[@"details"];
-        self.status = [data[@"status"] boolValue];
+        self.title     = data[@"title"];
+        self.details   = data[@"description"];
+        self.status    = [data[@"status"] boolValue];
         self.createdAt = [NSDate dateWithTimeIntervalSince1970:[data[@"createdAt"] doubleValue]];
         self.updatedAt = [NSDate dateWithTimeIntervalSince1970:[data[@"updatedAt"] doubleValue]];
     }
