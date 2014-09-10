@@ -17,6 +17,7 @@
 		43A38C9419C0C7CE0064C919 /* FBFAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9319C0C7CE0064C919 /* FBFAddTaskViewController.m */; };
 		43A38C9719C0DAF40064C919 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9619C0DAF40064C919 /* EditTaskViewController.m */; };
 		43A38C9A19C0DF820064C919 /* FBFTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9919C0DF820064C919 /* FBFTaskDetailViewController.m */; };
+		43A38C9D19C0E72C0064C919 /* FBFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9C19C0E72C0064C919 /* FBFTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		43A38C9619C0DAF40064C919 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTaskViewController.m; sourceTree = "<group>"; };
 		43A38C9819C0DF820064C919 /* FBFTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFTaskDetailViewController.h; sourceTree = "<group>"; };
 		43A38C9919C0DF820064C919 /* FBFTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFTaskDetailViewController.m; sourceTree = "<group>"; };
+		43A38C9B19C0E72C0064C919 /* FBFTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFTask.h; sourceTree = "<group>"; };
+		43A38C9C19C0E72C0064C919 /* FBFTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				43A38C6819C0C0FB0064C919 /* checklist.xcdatamodeld */,
+				43A38C9B19C0E72C0064C919 /* FBFTask.h */,
+				43A38C9C19C0E72C0064C919 /* FBFTask.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				43A38C6419C0C0FB0064C919 /* main.m in Sources */,
 				43A38C9719C0DAF40064C919 /* EditTaskViewController.m in Sources */,
 				43A38C9A19C0DF820064C919 /* FBFTaskDetailViewController.m in Sources */,
+				43A38C9D19C0E72C0064C919 /* FBFTask.m in Sources */,
 				43A38C9119C0C5150064C919 /* FBFChecklistTableViewController.m in Sources */,
 				43A38C6A19C0C0FB0064C919 /* checklist.xcdatamodeld in Sources */,
 			);
@@ -440,6 +446,7 @@
 				43A38C8619C0C0FB0064C919 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43A38C8719C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "checklistTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +455,7 @@
 				43A38C8919C0C0FB0064C919 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
