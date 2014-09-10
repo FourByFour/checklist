@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FBFAddTaskViewController.h
 //  checklist
 //
 //  Created by Patrick Reynolds on 9/10/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FBFAddTaskViewController : UIViewController
 
 @end
-
