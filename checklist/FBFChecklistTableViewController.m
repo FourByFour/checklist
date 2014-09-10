@@ -9,10 +9,13 @@
 #import "FBFChecklistTableViewController.h"
 #import "FBFTask.h"
 
+#define TASKS_URL @"http://checklist-api.herokuapp.com/tasks"
+
 @interface FBFChecklistTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tasks;
 @property (strong, nonatomic) NSURLSession *session;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @end
 
 @implementation FBFChecklistTableViewController
@@ -37,7 +40,8 @@
 #pragma mark - Load UI
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self requestTasksFromAPI];
+    self.refreshControl = [self configureRefreshControl];
+    [self requestTasks];
 }
 
 #pragma mark - Table View Datasource
@@ -62,18 +66,20 @@
 #pragma mark - API Helper
 - (void)laodTasks
 {
-    [self requestTasksFromAPI];
+    [self requestTasks];
 }
 
-- (void)requestTasksFromAPI
+- (void)requestTasks
 {
-    NSString *endpoint = @"http://checklist-api.herokuapp.com/tasks";
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:[NSURL URLWithString:endpoint] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:[NSURL URLWithString:TASKS_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSArray *jsonResponse = [NSJSONSerialization JSONObjectWithData:data
                                                                 options:0
                                                                   error:nil];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self syncTasks:jsonResponse];
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            [self.refreshControl endRefreshing];
              });
     }];
     [dataTask resume];
@@ -86,7 +92,20 @@
         FBFTask *newTask = [[FBFTask alloc] initWithTaskData:taskData];
         [self.tasks addObject:newTask];
     }
+    NSLog(@"Loaded Tasks!");
     [self.tableView reloadData];
+}
+
+#pragma mark - Refresh Control
+- (UIRefreshControl *)configureRefreshControl
+{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor blackColor];
+    [refreshControl addTarget:self
+                       action:@selector(laodTasks)
+             forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    return refreshControl;
 }
 
 #pragma mark - Navigation
