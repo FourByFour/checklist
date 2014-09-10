@@ -10,10 +10,13 @@
 		43A38C6419C0C0FB0064C919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C6319C0C0FB0064C919 /* main.m */; };
 		43A38C6719C0C0FB0064C919 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C6619C0C0FB0064C919 /* AppDelegate.m */; };
 		43A38C6A19C0C0FB0064C919 /* checklist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C6819C0C0FB0064C919 /* checklist.xcdatamodeld */; };
-		43A38C6D19C0C0FB0064C919 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C6C19C0C0FB0064C919 /* ViewController.m */; };
 		43A38C7019C0C0FB0064C919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A38C6E19C0C0FB0064C919 /* Main.storyboard */; };
 		43A38C7219C0C0FB0064C919 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A38C7119C0C0FB0064C919 /* Images.xcassets */; };
 		43A38C8119C0C0FB0064C919 /* checklistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C8019C0C0FB0064C919 /* checklistTests.m */; };
+		43A38C9119C0C5150064C919 /* FBFChecklistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9019C0C5150064C919 /* FBFChecklistTableViewController.m */; };
+		43A38C9419C0C7CE0064C919 /* FBFAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9319C0C7CE0064C919 /* FBFAddTaskViewController.m */; };
+		43A38C9719C0DAF40064C919 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9619C0DAF40064C919 /* EditTaskViewController.m */; };
+		43A38C9A19C0DF820064C919 /* FBFTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C9919C0DF820064C919 /* FBFTaskDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +36,19 @@
 		43A38C6519C0C0FB0064C919 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43A38C6619C0C0FB0064C919 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		43A38C6919C0C0FB0064C919 /* checklist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = checklist.xcdatamodel; sourceTree = "<group>"; };
-		43A38C6B19C0C0FB0064C919 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		43A38C6C19C0C0FB0064C919 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43A38C6F19C0C0FB0064C919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43A38C7119C0C0FB0064C919 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43A38C7A19C0C0FB0064C919 /* checklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = checklistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A38C7F19C0C0FB0064C919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A38C8019C0C0FB0064C919 /* checklistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checklistTests.m; sourceTree = "<group>"; };
+		43A38C8F19C0C5150064C919 /* FBFChecklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFChecklistTableViewController.h; sourceTree = "<group>"; };
+		43A38C9019C0C5150064C919 /* FBFChecklistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFChecklistTableViewController.m; sourceTree = "<group>"; };
+		43A38C9219C0C7CE0064C919 /* FBFAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFAddTaskViewController.h; sourceTree = "<group>"; };
+		43A38C9319C0C7CE0064C919 /* FBFAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFAddTaskViewController.m; sourceTree = "<group>"; };
+		43A38C9519C0DAF40064C919 /* FBFEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFEditTaskViewController.h; sourceTree = "<group>"; };
+		43A38C9619C0DAF40064C919 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTaskViewController.m; sourceTree = "<group>"; };
+		43A38C9819C0DF820064C919 /* FBFTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFTaskDetailViewController.h; sourceTree = "<group>"; };
+		43A38C9919C0DF820064C919 /* FBFTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFTaskDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				43A38C6E19C0C0FB0064C919 /* Main.storyboard */,
-				43A38C6B19C0C0FB0064C919 /* ViewController.h */,
-				43A38C6C19C0C0FB0064C919 /* ViewController.m */,
-				43A38C6819C0C0FB0064C919 /* checklist.xcdatamodeld */,
+				43A38C8A19C0C2980064C919 /* Controllers */,
+				43A38C8B19C0C2A50064C919 /* Models */,
 				43A38C6119C0C0FB0064C919 /* Supporting Files */,
 			);
 			path = checklist;
@@ -117,6 +125,29 @@
 				43A38C7F19C0C0FB0064C919 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43A38C8A19C0C2980064C919 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43A38C8F19C0C5150064C919 /* FBFChecklistTableViewController.h */,
+				43A38C9019C0C5150064C919 /* FBFChecklistTableViewController.m */,
+				43A38C9819C0DF820064C919 /* FBFTaskDetailViewController.h */,
+				43A38C9919C0DF820064C919 /* FBFTaskDetailViewController.m */,
+				43A38C9219C0C7CE0064C919 /* FBFAddTaskViewController.h */,
+				43A38C9319C0C7CE0064C919 /* FBFAddTaskViewController.m */,
+				43A38C9519C0DAF40064C919 /* FBFEditTaskViewController.h */,
+				43A38C9619C0DAF40064C919 /* EditTaskViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		43A38C8B19C0C2A50064C919 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43A38C6819C0C0FB0064C919 /* checklist.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A38C9419C0C7CE0064C919 /* FBFAddTaskViewController.m in Sources */,
 				43A38C6719C0C0FB0064C919 /* AppDelegate.m in Sources */,
 				43A38C6419C0C0FB0064C919 /* main.m in Sources */,
-				43A38C6D19C0C0FB0064C919 /* ViewController.m in Sources */,
+				43A38C9719C0DAF40064C919 /* EditTaskViewController.m in Sources */,
+				43A38C9A19C0DF820064C919 /* FBFTaskDetailViewController.m in Sources */,
+				43A38C9119C0C5150064C919 /* FBFChecklistTableViewController.m in Sources */,
 				43A38C6A19C0C0FB0064C919 /* checklist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
