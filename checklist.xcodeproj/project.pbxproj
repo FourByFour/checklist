@@ -13,7 +13,6 @@
 		43A38C6D19C0C0FB0064C919 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C6C19C0C0FB0064C919 /* ViewController.m */; };
 		43A38C7019C0C0FB0064C919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A38C6E19C0C0FB0064C919 /* Main.storyboard */; };
 		43A38C7219C0C0FB0064C919 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A38C7119C0C0FB0064C919 /* Images.xcassets */; };
-		43A38C7519C0C0FB0064C919 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A38C7319C0C0FB0064C919 /* LaunchScreen.xib */; };
 		43A38C8119C0C0FB0064C919 /* checklistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A38C8019C0C0FB0064C919 /* checklistTests.m */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		43A38C6C19C0C0FB0064C919 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43A38C6F19C0C0FB0064C919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43A38C7119C0C0FB0064C919 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		43A38C7419C0C0FB0064C919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		43A38C7A19C0C0FB0064C919 /* checklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = checklistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A38C7F19C0C0FB0064C919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A38C8019C0C0FB0064C919 /* checklistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checklistTests.m; sourceTree = "<group>"; };
@@ -83,13 +81,9 @@
 		43A38C6019C0C0FB0064C919 /* checklist */ = {
 			isa = PBXGroup;
 			children = (
-				43A38C6519C0C0FB0064C919 /* AppDelegate.h */,
-				43A38C6619C0C0FB0064C919 /* AppDelegate.m */,
+				43A38C6E19C0C0FB0064C919 /* Main.storyboard */,
 				43A38C6B19C0C0FB0064C919 /* ViewController.h */,
 				43A38C6C19C0C0FB0064C919 /* ViewController.m */,
-				43A38C6E19C0C0FB0064C919 /* Main.storyboard */,
-				43A38C7119C0C0FB0064C919 /* Images.xcassets */,
-				43A38C7319C0C0FB0064C919 /* LaunchScreen.xib */,
 				43A38C6819C0C0FB0064C919 /* checklist.xcdatamodeld */,
 				43A38C6119C0C0FB0064C919 /* Supporting Files */,
 			);
@@ -99,6 +93,9 @@
 		43A38C6119C0C0FB0064C919 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				43A38C6519C0C0FB0064C919 /* AppDelegate.h */,
+				43A38C6619C0C0FB0064C919 /* AppDelegate.m */,
+				43A38C7119C0C0FB0064C919 /* Images.xcassets */,
 				43A38C6219C0C0FB0064C919 /* Info.plist */,
 				43A38C6319C0C0FB0064C919 /* main.m */,
 			);
@@ -203,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				43A38C7019C0C0FB0064C919 /* Main.storyboard in Resources */,
-				43A38C7519C0C0FB0064C919 /* LaunchScreen.xib in Resources */,
 				43A38C7219C0C0FB0064C919 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,14 +250,6 @@
 				43A38C6F19C0C0FB0064C919 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		43A38C7319C0C0FB0064C919 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43A38C7419C0C0FB0064C919 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -348,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = checklist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = checklist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
