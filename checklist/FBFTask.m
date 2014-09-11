@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        self.id        = @([data[@"_id"] integerValue]);
+        self.id        = data[@"_id"];
         self.title     = data[@"title"];
         self.details   = data[@"description"];
         self.status    = [data[@"status"] boolValue];
