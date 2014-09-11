@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
+#import <AFNetworking/AFNetworking.h>
 #import "FBFChecklistTableViewController.h"
 #import "FBFTaskDetailViewController.h"
 #import "FBFTask.h"
 
-#define TASKS_URL @"http://checklist-api.herokuapp.com/tasks"
+#define TASKS_URL @"http://checklist-api.herokuapp.com/tasks/"
 
 @interface FBFChecklistTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tasks;
-@property (strong, nonatomic) NSURLSession *session;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @end
 
@@ -26,16 +26,6 @@
 {
     if (!_tasks) _tasks = [[NSMutableArray alloc] init];
     return _tasks;
-}
-
-- (NSURLSession *)session
-{
-    if (!_session) {
-        NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        [sessionConfiguration setHTTPAdditionalHeaders:@{ @"Accept" : @"application/json" }];
-        _session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
-    }
-    return _session;
 }
 
 #pragma mark - Load UI
@@ -80,18 +70,15 @@
 
 - (void)requestTasks
 {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:[NSURL URLWithString:TASKS_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSArray *jsonResponse = [NSJSONSerialization JSONObjectWithData:data
-                                                                options:0
-                                                                  error:nil];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self syncTasks:jsonResponse];
-            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-            [self.refreshControl endRefreshing];
-             });
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:TASKS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        [self syncTasks:responseObject];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [self.refreshControl endRefreshing];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
     }];
-    [dataTask resume];
 }
 
 - (void)syncTasks:(NSArray *)tasks
