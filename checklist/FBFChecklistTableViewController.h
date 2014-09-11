@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBFAddTaskViewController.h"
 
 @interface FBFChecklistTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
