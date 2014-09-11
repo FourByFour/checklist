@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBFTask.h"
 
 @interface FBFTaskDetailViewController : UIViewController
+
+@property (strong, nonatomic) FBFTask *task;
 
 @end

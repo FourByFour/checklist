@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class FBFTask;
+
 @interface FBFEditTaskViewController : UIViewController
+
+@property (strong, nonatomic) FBFTask *task;
 
 @end

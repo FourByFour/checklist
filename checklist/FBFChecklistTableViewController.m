@@ -7,6 +7,7 @@
 //
 
 #import "FBFChecklistTableViewController.h"
+#import "FBFTaskDetailViewController.h"
 #import "FBFTask.h"
 
 #define TASKS_URL @"http://checklist-api.herokuapp.com/tasks"
@@ -63,6 +64,14 @@
     return cell;
 }
 
+#pragma mark - Table View Delegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toTaskDetailVC"
+                              sender:indexPath];
+}
+
 #pragma mark - API Helper
 - (void)laodTasks
 {
@@ -111,7 +120,13 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    if ([segue.identifier isEqualToString:@"toTaskDetailVC"]) {
+        if ([segue.destinationViewController isKindOfClass:[FBFTaskDetailViewController class]]) {
+            FBFTaskDetailViewController *taskDetailVC = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            taskDetailVC.task = self.tasks[path.row];
+        }
+    }
 }
 
 @end
