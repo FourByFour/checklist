@@ -7,6 +7,7 @@
 //
 
 #import "FBFTaskDetailViewController.h"
+#import "FBFEditTaskViewController.h"
 
 @interface FBFTaskDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *taskTitleLabel;
@@ -41,7 +42,12 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    if ([segue.identifier isEqualToString:@"toEditTaskVC"]) {
+        if ([segue.destinationViewController isKindOfClass:[FBFEditTaskViewController class]]) {
+            FBFEditTaskViewController *editTaskVC = segue.destinationViewController;
+            editTaskVC.task = self.task;
+        }
+    }
 }
 
 @end
