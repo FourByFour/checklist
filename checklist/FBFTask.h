@@ -10,6 +10,7 @@
 
 @interface FBFTask : NSObject
 
+@property (strong, nonatomic) NSNumber *id;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *details;
 @property (nonatomic) BOOL status;

@@ -7,6 +7,7 @@
 //
 
 #import "FBFEditTaskViewController.h"
+#import "FBFTask.h"
 
 @interface FBFEditTaskViewController ()
 
@@ -17,19 +18,18 @@
 #pragma mark - Load UI
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 #pragma mark - IBActions
 - (IBAction)saveButtonPressed:(UIBarButtonItem *)sender
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
