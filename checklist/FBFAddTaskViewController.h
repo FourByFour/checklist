@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBFTask.h"
+
+@protocol FBFAddTaskViewControllerDelegate <NSObject>
+
+- (void)didCancel;
+- (void)didAddTask:(FBFTask *)task;
+
+@end
 
 @interface FBFAddTaskViewController : UIViewController
+
+@property (strong, nonatomic) id <FBFAddTaskViewControllerDelegate> delegate;
 
 @end

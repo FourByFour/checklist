@@ -13,7 +13,7 @@
 
 #define TASKS_URL @"http://checklist-api.herokuapp.com/tasks/"
 
-@interface FBFChecklistTableViewController ()
+@interface FBFChecklistTableViewController () <FBFAddTaskViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tasks;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
@@ -62,22 +62,60 @@
                               sender:indexPath];
 }
 
-#pragma mark - API Helper
-- (void)laodTasks
+#pragma mark - FBFAddTaskViewControllerDelegate
+- (void)didCancel
 {
-    [self requestTasks];
+    NSLog(@"Did cancel task!");
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
+
+- (void)didAddTask:(FBFTask *)task
+{
+    NSLog(@"Did add Task!");
+    [self sendCreateTaskRequest:task];
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
+
+
+#pragma mark - API Helper
+- (AFHTTPRequestOperationManager *)sharedOperationManager
+{
+    static AFHTTPRequestOperationManager *manager;
+    if (!manager) {
+        manager = [AFHTTPRequestOperationManager manager];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    }
+    return manager;
 }
 
 - (void)requestTasks
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:TASKS_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [[self sharedOperationManager] GET:TASKS_URL parameters:nil
+                               success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self syncTasks:responseObject];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         [self.refreshControl endRefreshing];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+    }];
+}
+
+- (void)sendCreateTaskRequest:(FBFTask *)task
+{
+    NSDictionary *parameters = @{
+                                 @"title": task.title,
+                                 @"description": task.details
+                                };
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [[self sharedOperationManager] POST:TASKS_URL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [self requestTasks];
+        NSLog(@"Posted new task!");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
 }
 
@@ -98,7 +136,7 @@
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.tintColor = [UIColor blackColor];
     [refreshControl addTarget:self
-                       action:@selector(laodTasks)
+                       action:@selector(requestTasks)
              forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
     return refreshControl;
@@ -112,6 +150,11 @@
             FBFTaskDetailViewController *taskDetailVC = segue.destinationViewController;
             NSIndexPath *path = sender;
             taskDetailVC.task = self.tasks[path.row];
+        }
+    } else if ([segue.identifier isEqualToString:@"toAddTaskVC"]) {
+        if ([segue.destinationViewController isKindOfClass:[FBFAddTaskViewController class]]) {
+            FBFAddTaskViewController *addTaskVC = segue.destinationViewController;
+            addTaskVC.delegate = self;
         }
     }
 }
