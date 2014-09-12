@@ -6,10 +6,16 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
+// Frameworks
 #import <UIKit/UIKit.h>
+
+// Controllers
+#import "FBFEditTaskViewController.h"
+
+// Models
 #import "FBFTask.h"
 
-@interface FBFTaskDetailViewController : UIViewController
+@interface FBFTaskDetailViewController : UIViewController <FBFEditTaskViewControllerDelegate>
 
 @property (strong, nonatomic) FBFTask *task;
 
