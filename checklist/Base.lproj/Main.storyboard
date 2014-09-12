@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistCell" textLabel="8ZO-RB-vtn" detailTextLabel="ODy-6Q-GvJ" style="IBUITableViewCellStyleSubtitle" id="vhv-E1-BHy">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ChecklistCell" textLabel="8ZO-RB-vtn" style="IBUITableViewCellStyleDefault" id="vhv-E1-BHy">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhv-E1-BHy" id="fcg-EP-gss">
@@ -30,12 +30,6 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8ZO-RB-vtn">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ODy-6Q-GvJ">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -60,7 +54,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="K7C-sW-RCL" id="eKh-a5-ZRg"/>
-                        <segue destination="2go-eA-m55" kind="push" identifier="toTaskDetailVC" id="mn7-vi-TgI"/>
+                        <segue destination="2go-eA-m55" kind="push" identifier="toTaskDetailVC" id="lKP-wL-1jn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8J-Na-Tnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
