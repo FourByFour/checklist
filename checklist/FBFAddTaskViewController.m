@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
+// Frameworks
 #import <AFNetworking/AFNetworking.h>
-#import "FBFAddTaskViewController.h"
 
-#define TASK_URL @"http://checklist-api.herokuapp.com/tasks"
+// Controllers
+#import "FBFAddTaskViewController.h"
 
 @interface FBFAddTaskViewController () <UITextFieldDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleInputField;
