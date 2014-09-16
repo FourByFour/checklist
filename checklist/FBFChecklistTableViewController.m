@@ -92,8 +92,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.tasks removeObjectAtIndex:indexPath.row];
         [self sendDeleteTaskRequest:self.tasks[indexPath.row]];
+        [self.tasks removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath]
                          withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -176,6 +176,7 @@
 
 - (void)sendDeleteTaskRequest:(FBFTask *)task
 {
+    
     NSString *taskEndpoint = [[FBFRequestManager checklistAPIEndpoint] stringByAppendingString:task.id];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
