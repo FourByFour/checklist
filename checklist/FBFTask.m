@@ -24,10 +24,20 @@
         self.title     = data[@"title"];
         self.details   = data[@"description"];
         self.status    = [data[@"status"] boolValue];
-        self.createdAt = [NSDate dateWithTimeIntervalSince1970:[data[@"createdAt"] doubleValue]];
-        self.updatedAt = [NSDate dateWithTimeIntervalSince1970:[data[@"updatedAt"] doubleValue]];
+        
+        NSString *createdAt = [self stripSecondsFromDate:[data[@"createdAt"] doubleValue]];
+        NSString *updatedAt = [self stripSecondsFromDate:[data[@"updatedAt"] doubleValue]];
+        
+        self.createdAt = [NSDate dateWithTimeIntervalSince1970:[createdAt doubleValue]];
+        self.updatedAt = [NSDate dateWithTimeIntervalSince1970:[updatedAt doubleValue]];
     }
     return self;
+}
+
+- (NSString *)stripSecondsFromDate:(double)date
+{
+    NSMutableString *mutableDate = [NSMutableString stringWithFormat:@"%0.0f", date];
+    return [mutableDate substringToIndex:mutableDate.length - 3];
 }
 
 @end
