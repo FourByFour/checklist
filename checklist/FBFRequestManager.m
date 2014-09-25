@@ -10,7 +10,7 @@
 
 @implementation FBFRequestManager
 
-#define TASKS_URL @"http://checklist-api.herokuapp.com/tasks/"
+#define TASKS_URL @"http://api-checklist.herokuapp.com/tasks/"
 
 + (NSString *)checklistAPIEndpoint
 {

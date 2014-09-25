@@ -118,7 +118,7 @@
                              completion:nil];
 }
 
-#pragma mark - API Helper
+#pragma mark - API Helpers
 - (void)requestTasks
 {
     AFHTTPRequestOperationManager *manager = [FBFRequestManager sharedOperationManager];
