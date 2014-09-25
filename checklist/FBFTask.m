@@ -20,16 +20,19 @@
 {
     self = [super init];
     if (self) {
-        self.id        = data[@"_id"];
-        self.title     = data[@"title"];
-        self.details   = data[@"description"];
-        self.status    = [data[@"status"] boolValue];
+        if (data) {
+            self.id = data[@"_id"];
+            self.status = [data[@"status"] boolValue];
+            
+            NSString *createdAt = [self stripSecondsFromDate:[data[@"createdAt"] doubleValue]];
+            NSString *updatedAt = [self stripSecondsFromDate:[data[@"updatedAt"] doubleValue]];
+            
+            self.createdAt = [NSDate dateWithTimeIntervalSince1970:[createdAt doubleValue]];
+            self.updatedAt = [NSDate dateWithTimeIntervalSince1970:[updatedAt doubleValue]];
+        }
         
-        NSString *createdAt = [self stripSecondsFromDate:[data[@"createdAt"] doubleValue]];
-        NSString *updatedAt = [self stripSecondsFromDate:[data[@"updatedAt"] doubleValue]];
-        
-        self.createdAt = [NSDate dateWithTimeIntervalSince1970:[createdAt doubleValue]];
-        self.updatedAt = [NSDate dateWithTimeIntervalSince1970:[updatedAt doubleValue]];
+        self.title = data[@"title"];
+        self.details = data[@"description"];
     }
     return self;
 }
