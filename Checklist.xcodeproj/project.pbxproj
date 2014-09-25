@@ -39,7 +39,7 @@
 		439596AB19C2666B004563E9 /* FBFRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFRequestManager.m; sourceTree = "<group>"; };
 		439596AD19C28FC2004563E9 /* completed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = completed.png; sourceTree = "<group>"; };
 		439596B119C29301004563E9 /* incomplete.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = incomplete.jpeg; sourceTree = "<group>"; };
-		43A38C5E19C0C0FB0064C919 /* checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = checklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A38C5E19C0C0FB0064C919 /* Checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A38C6219C0C0FB0064C919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A38C6319C0C0FB0064C919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43A38C6519C0C0FB0064C919 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		43A38C6919C0C0FB0064C919 /* checklist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = checklist.xcdatamodel; sourceTree = "<group>"; };
 		43A38C6F19C0C0FB0064C919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43A38C7119C0C0FB0064C919 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		43A38C7A19C0C0FB0064C919 /* checklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = checklistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A38C7A19C0C0FB0064C919 /* ChecklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A38C7F19C0C0FB0064C919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A38C8019C0C0FB0064C919 /* checklistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checklistTests.m; sourceTree = "<group>"; };
 		43A38C8F19C0C5150064C919 /* FBFChecklistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFChecklistTableViewController.h; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 		43A38C5F19C0C0FB0064C919 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43A38C5E19C0C0FB0064C919 /* checklist.app */,
-				43A38C7A19C0C0FB0064C919 /* checklistTests.xctest */,
+				43A38C5E19C0C0FB0064C919 /* Checklist.app */,
+				43A38C7A19C0C0FB0064C919 /* ChecklistTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,9 +191,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43A38C5D19C0C0FB0064C919 /* checklist */ = {
+		43A38C5D19C0C0FB0064C919 /* Checklist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43A38C8419C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "checklist" */;
+			buildConfigurationList = 43A38C8419C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "Checklist" */;
 			buildPhases = (
 				F9F8EE72CA1A47BFB27E5B30 /* Check Pods Manifest.lock */,
 				43A38C5A19C0C0FB0064C919 /* Sources */,
@@ -205,14 +205,14 @@
 			);
 			dependencies = (
 			);
-			name = checklist;
+			name = Checklist;
 			productName = checklist;
-			productReference = 43A38C5E19C0C0FB0064C919 /* checklist.app */;
+			productReference = 43A38C5E19C0C0FB0064C919 /* Checklist.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43A38C7919C0C0FB0064C919 /* checklistTests */ = {
+		43A38C7919C0C0FB0064C919 /* ChecklistTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43A38C8719C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "checklistTests" */;
+			buildConfigurationList = 43A38C8719C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "ChecklistTests" */;
 			buildPhases = (
 				43A38C7619C0C0FB0064C919 /* Sources */,
 				43A38C7719C0C0FB0064C919 /* Frameworks */,
@@ -223,9 +223,9 @@
 			dependencies = (
 				43A38C7C19C0C0FB0064C919 /* PBXTargetDependency */,
 			);
-			name = checklistTests;
+			name = ChecklistTests;
 			productName = checklistTests;
-			productReference = 43A38C7A19C0C0FB0064C919 /* checklistTests.xctest */;
+			productReference = 43A38C7A19C0C0FB0064C919 /* ChecklistTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43A38C5919C0C0FB0064C919 /* Build configuration list for PBXProject "checklist" */;
+			buildConfigurationList = 43A38C5919C0C0FB0064C919 /* Build configuration list for PBXProject "Checklist" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,8 +259,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43A38C5D19C0C0FB0064C919 /* checklist */,
-				43A38C7919C0C0FB0064C919 /* checklistTests */,
+				43A38C5D19C0C0FB0064C919 /* Checklist */,
+				43A38C7919C0C0FB0064C919 /* ChecklistTests */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +349,7 @@
 /* Begin PBXTargetDependency section */
 		43A38C7C19C0C0FB0064C919 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43A38C5D19C0C0FB0064C919 /* checklist */;
+			target = 43A38C5D19C0C0FB0064C919 /* Checklist */;
 			targetProxy = 43A38C7B19C0C0FB0064C919 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,7 +450,7 @@
 				INFOPLIST_FILE = checklist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Checklist;
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				INFOPLIST_FILE = checklist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Checklist;
 			};
 			name = Release;
 		};
@@ -480,7 +480,7 @@
 				);
 				INFOPLIST_FILE = checklistTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ChecklistTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/checklist.app/checklist";
 			};
 			name = Debug;
@@ -495,7 +495,7 @@
 				);
 				INFOPLIST_FILE = checklistTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ChecklistTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/checklist.app/checklist";
 			};
 			name = Release;
@@ -503,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43A38C5919C0C0FB0064C919 /* Build configuration list for PBXProject "checklist" */ = {
+		43A38C5919C0C0FB0064C919 /* Build configuration list for PBXProject "Checklist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43A38C8219C0C0FB0064C919 /* Debug */,
@@ -512,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43A38C8419C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "checklist" */ = {
+		43A38C8419C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "Checklist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43A38C8519C0C0FB0064C919 /* Debug */,
@@ -521,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43A38C8719C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "checklistTests" */ = {
+		43A38C8719C0C0FB0064C919 /* Build configuration list for PBXNativeTarget "Checklist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43A38C8819C0C0FB0064C919 /* Debug */,
